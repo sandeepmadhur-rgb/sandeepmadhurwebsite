@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandeep Madhur | GTM Planning & Analytics Consultant</title>
+    <title>Sandeep Madhur | Sales Planning & Analytics Consultant</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -697,7 +697,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(-50%);
+                transform: translateX(calc(-450px * 10 - 2rem * 10));
             }
         }
         
@@ -707,10 +707,6 @@
         
         .testimonials-ticker-track.playing {
             animation-play-state: running;
-        }
-        
-        .testimonials-ticker-track:hover {
-            animation-play-state: paused;
         }
         
         @media (max-width: 768px) {
@@ -903,10 +899,9 @@
         <div class="container">
             <a href="#home" class="logo">Sandeep Madhur</a>
             <ul>
-                <li><a href="#how-i-help">How I Help</a></li>
                 <li><a href="#who-i-help">Who I Help</a></li>
                 <li><a href="#testimonials">What Clients Say</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#how-i-help">How I Help</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1247,44 +1242,6 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="bg-dark">
-        <div class="container">
-            <div class="section-header">
-                <h2>Pricing</h2>
-                <p>Transparent pricing designed for flexibility and value</p>
-            </div>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card featured">
-                    <h3>Consulting Services</h3>
-                    <div class="price">$275<span style="font-size: 1.5rem; font-weight: 400;">/hr</span></div>
-                    <p class="price-detail">Typical engagement: $5K-$10K/month</p>
-                    <ul>
-                        <li><strong>I do the work</strong> - delivering models, analyses, and strategic frameworks</li>
-                        <li>Fixed scope agreed upfront</li>
-                        <li>Planning, forecasting, and analytics projects</li>
-                        <li>Embedded partner to your Finance and GTM teams</li>
-                        <li>High-quality deliverables at startup speed</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary" style="margin-top: 2rem;">Get Started</a>
-                </div>
-                
-                <div class="pricing-card">
-                    <h3>Coaching & Advisory</h3>
-                    <div class="price">$1,250<span style="font-size: 1.5rem; font-weight: 400;">/mo</span></div>
-                    <p class="price-detail">Up to five 45-minute sessions monthly</p>
-                    <ul>
-                        <li><strong>You do the work</strong> - I serve as strategic advisor and sounding board</li>
-                        <li>For companies building internal capability</li>
-                        <li>Coaching existing RevOps/Finance talent</li>
-                        <li>Strategic thinking and communication</li>
-                        <li>Understanding the broader GTM engine</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-secondary" style="margin-top: 2rem;">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- About Section -->
     <section id="about">
@@ -1353,10 +1310,10 @@
             </div>
             
             <div class="contact-buttons">
-                <a href="mailto:sandeep.madhur@gmail.com" class="contact-btn">
+                <a href="/cdn-cgi/l/email-protection#e695878882838396c88b87828e9394a6818b878f8ac885898b" class="contact-btn">
                     <div class="icon">✉️</div>
                     <div class="label">Email</div>
-                    <div class="detail">sandeep.madhur@gmail.com</div>
+                    <div class="detail"><span class="__cf_email__" data-cfemail="0172606f656464712f6c606569747341666c60686d2f626e6c">[email&#160;protected]</span></div>
                 </a>
                 
                 <a href="https://www.linkedin.com/in/sandeepmadhur" target="_blank" class="contact-btn">
@@ -1383,14 +1340,14 @@
         <div class="container">
             <p>&copy; 2025 Sandeep Madhur. All rights reserved.</p>
             <p style="margin-top: 1rem;">
-                <a href="mailto:sandeep.madhur@gmail.com">sandeep.madhur@gmail.com</a> | 
+                <a href="/cdn-cgi/l/email-protection#6417050a000101144a0905000c1116240309050d084a070b09"><span class="__cf_email__" data-cfemail="d3a0b2bdb7b6b6a3fdbeb2b7bba6a193b4beb2babffdb0bcbe">[email&#160;protected]</span></a> | 
                 <a href="https://www.linkedin.com/in/sandeepmadhur" target="_blank">LinkedIn</a>
             </p>
         </div>
     </footer>
 
     <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA4-MEASUREMENT-ID"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA4-MEASUREMENT-ID"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -1465,17 +1422,6 @@
             const x = e.pageX - testimonialsTicker.offsetLeft;
             const walk = (x - startX) * 2; // Scroll speed multiplier
             testimonialsTicker.scrollLeft = scrollLeft - walk;
-        });
-        
-        // Also pause on hover
-        testimonialsTrack.addEventListener('mouseenter', () => {
-            testimonialsTrack.classList.add('paused');
-        });
-        
-        testimonialsTrack.addEventListener('mouseleave', () => {
-            if (hasStarted) {
-                testimonialsTrack.classList.remove('paused');
-            }
         });
     </script>
 </body>
